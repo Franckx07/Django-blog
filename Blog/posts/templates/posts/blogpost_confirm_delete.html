@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Delete an Article</title>
+    {% endblock  %}
+
+{% block content %}
+   <!-- <h1>Delete an Article</h1> -->
+    <form method = 'POST'>
+        {% csrf_token %}
+        <p>Do you really want to delete the article <strong> {{ post.title }} ? </strong> </p>
+        <input class="btn btn-delete" type = 'submit' value="Yes Delete">
+    </form>
+{% endblock %}
